@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<library xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://farenda.com/library"
+         xsi:schemaLocation="http://farenda.com/library src/main/resources/xml/books.xsd"
+         location="Kraków">
+    <book>
+        <title>Enterprise Integration Patterns</title>
+        <price>50</price>
+    </book>
+</library>

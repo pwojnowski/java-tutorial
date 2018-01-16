@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xsd:schema attributeFormDefault="unqualified"
+            elementFormDefault="qualified"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+    <!-- XML Schema types definitions -->
+    <xsd:complexType name="LibraryType">
+        <xsd:sequence>
+            <xsd:element name="book" type="BookType"
+                         minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+        <xsd:attribute name="location" type="xsd:string" />
+    </xsd:complexType>
+
+    <xsd:complexType name="BookType">
+        <xsd:sequence>
+            <xsd:element name="title" type="xsd:string"
+                         minOccurs="1" maxOccurs="1"/>
+            <xsd:element name="price" type="xsd:decimal" />
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <!-- Definition of XML content -->
+    <xsd:element name="library" type="LibraryType" />
+</xsd:schema>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<library location="Kraków">
+    <book>
+        <title>Enterprise Integration Patterns</title>
+        <price>50</price>
+    </book>
+    <book>
+        <title>Effective Java</title>
+        <price>no price, yet</price>
+    </book>
+</library>
