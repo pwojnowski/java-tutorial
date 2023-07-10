@@ -1,18 +1,18 @@
 package com.farenda.javax.validation;
 
-import javax.validation.constraints.Max;
-import javax.validation.constraints.Min;
-import javax.validation.constraints.Size;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.Size;
 
 public class Player {
 
     // name have to be 3 chars:
     @Size(min = 3, max = 3)
-    private String name;
+    private final String name;
 
     // possible score in game:
     @Min(0) @Max(100)
-    private int score;
+    private final int score;
 
     public Player(String name, int score) {
         this.name = name;

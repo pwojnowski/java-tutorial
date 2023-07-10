@@ -12,7 +12,7 @@ import static org.junit.Assert.*;
 
 public class PracticalFlatMapTest {
 
-    private PracticalFlatMap practical = new PracticalFlatMap();
+    private final PracticalFlatMap practical = new PracticalFlatMap();
 
     @Test
     public void shouldCollectAirports() {

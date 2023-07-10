@@ -1,6 +1,7 @@
 package com.farenda.javax.validation;
 
-import javax.validation.*;
+import jakarta.validation.*;
+
 import java.util.Set;
 
 public class RunValidator {

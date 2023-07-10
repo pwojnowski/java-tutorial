@@ -1,15 +1,12 @@
 package com.farenda.javax.xml;
 
-import com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl;
+import org.apache.xerces.jaxp.DocumentBuilderFactoryImpl;
 import org.w3c.dom.Document;
 import org.xml.sax.ErrorHandler;
 import org.xml.sax.SAXParseException;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
-
-import java.io.File;
-import java.nio.file.Files;
 
 import static javax.xml.XMLConstants.W3C_XML_SCHEMA_NS_URI;
 

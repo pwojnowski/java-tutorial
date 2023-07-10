@@ -1,9 +1,10 @@
 package com.farenda.javax.validation;
 
 import com.google.common.collect.Sets;
+import jakarta.validation.ConstraintViolation;
 import org.junit.Test;
 
-import javax.validation.ConstraintViolation;
+import java.math.BigDecimal;
 import java.util.Date;
 import java.util.Set;
 
@@ -14,11 +15,9 @@ import static org.junit.Assert.assertTrue;
 
 public class ConstrainedBeanTest {
 
-    private boolean isValid(
-            String propertyName, Object value) {
-        Set<ConstraintViolation<ConstrainedBean>> violations
-                = validator.validateValue(
-                        ConstrainedBean.class, propertyName, value);
+    private boolean isValid(String propertyName, Object value) {
+        Set<ConstraintViolation<ConstrainedBean>> violations = validator.validateValue(
+                ConstrainedBean.class, propertyName, value);
         if (violations.size() == 0) {
             return true;
         }
@@ -86,15 +85,15 @@ public class ConstrainedBeanTest {
     @Test
     public void checkDecimalMin() {
         assertTrue(isValid("minPrice", null));
-        assertTrue(isValid("minPrice", 10));
-        assertFalse(isValid("minPrice", 9.98));
+        assertTrue(isValid("minPrice", new BigDecimal(10)));
+        assertFalse(isValid("minPrice", new BigDecimal("9.98")));
     }
 
     @Test
     public void checkDecimalMax() {
         assertTrue(isValid("maxPrice", null));
-        assertTrue(isValid("maxPrice", 20));
-        assertFalse(isValid("maxPrice", 42));
+        assertTrue(isValid("maxPrice", new BigDecimal(20)));
+        assertFalse(isValid("maxPrice", new BigDecimal(42)));
     }
 
     @Test

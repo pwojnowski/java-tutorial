@@ -1,6 +1,6 @@
 package com.farenda.javax.validation;
 
-import javax.validation.constraints.*;
+import jakarta.validation.constraints.*;
 import java.math.BigDecimal;
 import java.util.Date;
 import java.util.Set;

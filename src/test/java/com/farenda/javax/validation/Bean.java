@@ -1,7 +1,7 @@
 package com.farenda.javax.validation;
 
-import javax.validation.Validation;
-import javax.validation.Validator;
+import jakarta.validation.Validation;
+import jakarta.validation.Validator;
 
 public class Bean {
 
