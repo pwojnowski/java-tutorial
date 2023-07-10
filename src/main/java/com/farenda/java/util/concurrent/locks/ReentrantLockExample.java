@@ -8,7 +8,7 @@ import java.util.concurrent.locks.ReentrantLock;
 public class ReentrantLockExample {
 
     private static class Counter {
-        private ReentrantLock lock = new ReentrantLock();
+        private final ReentrantLock lock = new ReentrantLock();
         private int number;
 
         public Counter(int number) {
@@ -35,7 +35,7 @@ public class ReentrantLockExample {
         private static int nth = 0;
 
         private final int id = ++nth;
-        private Counter counter;
+        private final Counter counter;
 
         public Worker(Counter counter) {
             this.counter = counter;

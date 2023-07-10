@@ -11,7 +11,7 @@ class Arbiter implements Runnable {
 
     // Table that decides which weapon wins/draws/loses
     // to other kinds of weapon:
-    private static EnumMap<Weapons,EnumMap<Weapons,Integer>>
+    private static final EnumMap<Weapons, EnumMap<Weapons, Integer>>
             SCORING_TABLE = new EnumMap<>(Weapons.class);
 
     static {
@@ -59,9 +59,15 @@ class Arbiter implements Runnable {
                 player1.weapon, player2.weapon);
 
         switch (fight()) {
-            case -1: ++player1Wins; break;
-            case  0: ++draws;       break;
-            case  1: ++player2Wins; break;
+            case -1:
+                ++player1Wins;
+                break;
+            case 0:
+                ++draws;
+                break;
+            case 1:
+                ++player2Wins;
+                break;
         }
 
         if (playedGames() == maxGames) {

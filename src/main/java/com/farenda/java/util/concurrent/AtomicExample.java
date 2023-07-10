@@ -29,7 +29,7 @@ public class AtomicExample {
         private static int nth = 0;
 
         private final int id = ++nth;
-        private Counter counter;
+        private final Counter counter;
 
         public Worker(Counter counter) {
             this.counter = counter;

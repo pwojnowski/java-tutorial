@@ -7,7 +7,7 @@ import java.util.concurrent.*;
 
 public class AutoCloseableExecutorService implements AutoCloseable, ExecutorService {
 
-    private ExecutorService delegate;
+    private final ExecutorService delegate;
 
     public AutoCloseableExecutorService(ExecutorService delegate) {
         Objects.requireNonNull(delegate, "ExecutorService must not be null!");

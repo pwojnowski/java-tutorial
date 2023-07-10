@@ -14,7 +14,7 @@ public class ConcurrentRandomNumbers {
 
     private static class ConcurrentRange implements Callable<List<Integer>> {
 
-        private ConcurrentRandomNumbers generator;
+        private final ConcurrentRandomNumbers generator;
         private final int from;
         private final int howMany;
 
@@ -25,7 +25,7 @@ public class ConcurrentRandomNumbers {
         }
 
         @Override
-        public List<Integer> call() throws Exception {
+        public List<Integer> call() {
             return generator.randomRange(from, howMany);
         }
     }

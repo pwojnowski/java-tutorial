@@ -15,7 +15,7 @@ public class CallableExample {
         private final int id = ++nth;
 
         @Override
-        public Integer call() throws Exception {
+        public Integer call() {
             int value = new Random().nextInt(1000);
             try {
                 System.out.printf("Task %d started computing...%n", id);

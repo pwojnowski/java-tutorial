@@ -19,7 +19,8 @@ public class CloseableLock implements AutoCloseable {
     @Override
     public void close() {
         System.out.println("Releasing lock.");
-        lock.unlock(); }
+        lock.unlock();
+    }
 
     public static void main(String[] args) {
         Lock lock = new ReentrantLock();

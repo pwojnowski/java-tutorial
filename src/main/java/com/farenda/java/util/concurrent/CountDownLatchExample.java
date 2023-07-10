@@ -19,7 +19,7 @@ public class CountDownLatchExample {
         }
 
         @Override
-        public String call() throws Exception {
+        public String call() {
             value = convert(value);
             latch.countDown();
             return value;
